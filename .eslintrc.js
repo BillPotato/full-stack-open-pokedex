@@ -2,6 +2,7 @@ module.exports = {
   "env": {
     "browser": true,
     "es6": true,
+    "node": true,
     "jest/globals": true
   },
   "extends": [
@@ -21,11 +22,11 @@ module.exports = {
   "rules": {
     "indent": [
       "error",
-        2
-      ],
+      2
+    ],
     "quotes": [
       "error",
-      "single"
+      "double"
     ],
     "semi": [
       "error",
@@ -39,7 +40,7 @@ module.exports = {
     "arrow-spacing": [
       "error", { "before": true, "after": true }
     ],
-    "no-console": "error",
+    "no-console": ["error", { allow: ["log"] }],
     "react/prop-types": 0
   }
 }

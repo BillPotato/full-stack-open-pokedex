@@ -10,8 +10,10 @@ app.get("/version", (req, res) => {
   res.end("1") // change this string to ensure a new version deployed
 })
 
-app.get("/health", (req, res) => {
-  res.send("ok")
+app.get("/health", () => {
+  throw Error("Error")
+
+  // res.send("ok")
 })
 
 app.listen(PORT, () => {
